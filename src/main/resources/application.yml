@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/fjerry?serverTimezone=UTC&useUnicode=ture&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#ÕûºÏmybatis#
+mybatis:
+  type-aliases-package: com.sx.daoyun.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml

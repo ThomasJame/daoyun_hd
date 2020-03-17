@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.StudentMapper">
+    <!--///这里还可以使用缓存-->
+    <!--使这个能辨别 要在yml中整合mybatis-->
+    <select id="queryStudentList" resultType="Student">
+      select *from student
+    </select>
+</mapper>

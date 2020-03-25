@@ -26,7 +26,11 @@
             <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
-
+        <!--安全-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
         <!--mybatis-->
 
         <dependency>

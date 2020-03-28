@@ -1426,7 +1426,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="285" name="name">
+    <column id="342" parent="285" name="userAccount">
       <Position>2</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1437,7 +1437,7 @@
       <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="285" name="account">
+    <column id="344" parent="285" name="nickname">
       <Position>4</Position>
       <Comment>用户账号</Comment>
       <DataType>varchar(128)|0s</DataType>

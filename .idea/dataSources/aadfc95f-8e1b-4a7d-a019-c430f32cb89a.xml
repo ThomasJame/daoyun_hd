@@ -1467,68 +1467,78 @@
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="349" parent="285" name="PRIMARY">
+    <column id="349" parent="285" name="updatetime">
+      <Position>9</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="350" parent="285" name="updater">
+      <Position>10</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="351" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="350" parent="286" name="id">
+    <column id="352" parent="286" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="286" name="userid">
+    <column id="353" parent="286" name="userid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="352" parent="286" name="courseid">
+    <column id="354" parent="286" name="courseid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="286" name="attend">
+    <column id="355" parent="286" name="attend">
       <Position>4</Position>
       <Comment>出席 签到</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="354" parent="286" name="createtime">
+    <column id="356" parent="286" name="createtime">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="286" name="creater">
+    <column id="357" parent="286" name="creater">
       <Position>6</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="286" name="updatetime">
+    <column id="358" parent="286" name="updatetime">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="286" name="updater">
+    <column id="359" parent="286" name="updater">
       <Position>8</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="358" parent="286" name="userid">
+    <index id="360" parent="286" name="userid">
       <ColNames>userid</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="359" parent="286" name="courseid">
+    <index id="361" parent="286" name="courseid">
       <ColNames>courseid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="360" parent="286" name="PRIMARY">
+    <key id="362" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="361" parent="286" name="usercourse_ibfk_1">
+    <foreign-key id="363" parent="286" name="usercourse_ibfk_1">
       <ColNames>userid</ColNames>
       <RefSchemaName>fjerry</RefSchemaName>
       <RefTableName>user</RefTableName>
@@ -1536,7 +1546,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="362" parent="286" name="usercourse_ibfk_2">
+    <foreign-key id="364" parent="286" name="usercourse_ibfk_2">
       <ColNames>courseid</ColNames>
       <RefSchemaName>fjerry</RefSchemaName>
       <RefTableName>course</RefTableName>
@@ -1544,58 +1554,58 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="363" parent="287" name="id">
+    <column id="365" parent="287" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="287" name="userid">
+    <column id="366" parent="287" name="userid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="287" name="roleid">
+    <column id="367" parent="287" name="roleid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="287" name="createtime">
+    <column id="368" parent="287" name="createtime">
       <Position>4</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="287" name="creater">
+    <column id="369" parent="287" name="creater">
       <Position>5</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="368" parent="287" name="updatetime">
+    <column id="370" parent="287" name="updatetime">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="287" name="updater">
+    <column id="371" parent="287" name="updater">
       <Position>7</Position>
       <DataType>varchar(64)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="370" parent="287" name="userid">
+    <index id="372" parent="287" name="userid">
       <ColNames>userid</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="371" parent="287" name="userrole_ibfk_2">
+    <index id="373" parent="287" name="userrole_ibfk_2">
       <ColNames>roleid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="372" parent="287" name="PRIMARY">
+    <key id="374" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="373" parent="287" name="userrole_ibfk_1">
+    <foreign-key id="375" parent="287" name="userrole_ibfk_1">
       <ColNames>userid</ColNames>
       <RefSchemaName>fjerry</RefSchemaName>
       <RefTableName>user</RefTableName>
@@ -1603,7 +1613,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="374" parent="287" name="userrole_ibfk_2">
+    <foreign-key id="376" parent="287" name="userrole_ibfk_2">
       <ColNames>roleid</ColNames>
       <RefSchemaName>fjerry</RefSchemaName>
       <RefTableName>role</RefTableName>

@@ -6,11 +6,11 @@ public class Tool<T> {
     public static int NEED_RE_LOGIN = 1;
     public static int NEED_RETRY = 2;
 
-    public int code;
+    private int code;
 
-    public String message;
+    private String message;
 
-    public String flag;
+    private String flag;
     private T data;
 
     public String getMessage() {
@@ -39,6 +39,22 @@ public class Tool<T> {
 
     public void setErrCode(int code) {
         this.code = code;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
     }
 }
 

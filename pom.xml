@@ -19,6 +19,13 @@
     </properties>
 
     <dependencies>
+        <!--热部署-->
+       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+        <scope>true</scope>
+        </dependency>
         <!--lombok 用在构造函数等-->
         <dependency>
             <groupId>org.projectlombok</groupId>

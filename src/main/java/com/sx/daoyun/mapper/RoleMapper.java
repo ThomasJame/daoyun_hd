@@ -11,6 +11,7 @@ import java.util.List;
 @Repository///DAO层 使用的 也可以用com
 public interface RoleMapper {
     List <Role> queryRoleNamebyRoleId(int id);
+    List <Role> queryRoleList();
     Role queryRoleById(int id);
     int addRole(Role role);
     int updateRole(Role role);

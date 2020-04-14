@@ -71,6 +71,7 @@ public class UserController {
         String phone=request.getParameter("phone");
         String academy=request.getParameter("academy");
         String password=request.getParameter("password");
+        String schoolid=request.getParameter("schoolid");//表示学号 或者教师工号
         ///当前操作用户
         String creater="郭星宇";
         Date date=new Date();
@@ -82,6 +83,7 @@ public class UserController {
         user.setNickname(nickname);
         user.setPhone(phone);
         user.setPassword(password);
+        user.setSchoolid(schoolid);
         user.setCreater(creater);
         user.setCreatetime(date);
         userMapper.addUser(user);
@@ -116,8 +118,9 @@ public class UserController {
         String phone=request.getParameter("phone");
         String academy=request.getParameter("academy");
         String password=request.getParameter("password");
+        String schoolid=request.getParameter("schoolid");
         ///当前操作用户
-        String updater="郭星宇";
+        String updater="郭星宇2";
         Date date=new Date();
 //        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         User user=new User();
@@ -132,6 +135,7 @@ public class UserController {
         user.setPassword(password);
         user.setUpdater(updater);
         user.setUpdatetime(date);
+        user.setSchoolid(schoolid);
         userMapper.updateUser(user);
         result.setMessage("更新用户成功");
         result.setFlag("true");

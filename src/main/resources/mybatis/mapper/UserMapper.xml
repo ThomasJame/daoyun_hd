@@ -9,9 +9,9 @@
       select *from user
     </select>
     <insert id="addUser" parameterType="User">
-        insert into user (userAccount,sex,nickname,phone,academy,createtime,creater,password)
+        insert into user (userAccount,sex,nickname,phone,academy,createtime,creater,password,schoolid)
         values (#{userAccount},#{sex},#{nickname},#{phone},#{academy},#{createtime},#{creater}
-        ,#{password}
+        ,#{password},#{schoolid}
         )
     </insert>
     <select id="queryUserById" resultType="User">
@@ -23,7 +23,7 @@
     <update id="updateUser" parameterType="User">
         update user set userAccount=#{userAccount},sex=#{sex},nickname=#{nickname}
         ,phone=#{phone},academy=#{academy},updatetime=#{updatetime},password=#{password},
-        updater=#{updater}
+        updater=#{updater},schoolid=#{schoolid}
         where id=#{id}
     </update>
     <update id="resetPassword" parameterType="int">

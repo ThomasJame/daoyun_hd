@@ -21,6 +21,15 @@ public class User {
     private String updater;
     private Date updatetime;
     private String password;
+    private String schoolid;
+
+    public String getSchoolid() {
+        return schoolid;
+    }
+
+    public void setSchoolid(String schoolid) {
+        this.schoolid = schoolid;
+    }
 
     public String getPassword() {
         return password;

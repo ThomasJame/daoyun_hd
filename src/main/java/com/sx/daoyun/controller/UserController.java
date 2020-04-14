@@ -25,6 +25,12 @@ public class UserController {
     @Autowired
     private Transition transition;
 
+    @GetMapping("test")
+    public int sendMy(){
+
+
+        return 520;
+    }
 
     @GetMapping("user/list") ///显示用户列表
     public Tool  queryUserList(){

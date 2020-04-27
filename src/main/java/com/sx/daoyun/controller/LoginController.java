@@ -2,6 +2,7 @@ package com.sx.daoyun.controller;
 
 import com.sx.daoyun.mapper.UserMapper;
 import com.sx.daoyun.pojo.User;
+import com.sx.daoyun.tool.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -13,11 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginController {
     @Autowired
     private UserMapper userMapper;
-
     @PostMapping("login/pwd")  //校验密码
     public  Tool verifyPassword(HttpServletRequest request){
         Tool result = new Tool<>();
-        int id= Integer.parseInt(request.getParameter("id"));
+        int id= Integer.parseInt(request.getParameter("userId"));
         String password=request.getParameter("password");
         User user =userMapper.queryUserById(id);
          if (password.equals(user.getPassword())){
@@ -33,11 +33,12 @@ public class LoginController {
          }
 
     }
+
     @PutMapping("login/pwd")  //修改密码
     public  Tool updatePassword(HttpServletRequest request){
         Tool result = new Tool<>();
         String password=request.getParameter("password");
-        int id= Integer.parseInt(request.getParameter("id"));
+        int id= Integer.parseInt(request.getParameter("userId"));
         User user=userMapper.queryUserById(id);
         user.setPassword(password);
         userMapper.updateUser(user);

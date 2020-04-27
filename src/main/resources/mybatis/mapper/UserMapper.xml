@@ -8,10 +8,18 @@
     <select id="queryUserList" resultType="User">
       select *from user
     </select>
+    <select id="queryUserByName" resultType="User">
+      select *from user where UserName=#{0}
+    </select>
     <insert id="addUser" parameterType="User">
-        insert into user (userAccount,sex,nickname,phone,academy,createtime,creater,password,schoolid)
-        values (#{userAccount},#{sex},#{nickname},#{phone},#{academy},#{createtime},#{creater}
-        ,#{password},#{schoolid}
+        insert into user (UserName,NickName,Sex,Number,Mobile,Email,Password,School,Department,Photo,exp
+        ,CharmValue,LanDouNum,XinYi,Birthday,Createby,CreateDate,
+        QianDaoExp,ResourceExp,taskExp,VideoExp,TimeExp,DiscussExp,DianZanExp,JoinClassExp)
+        values (#{UserName},#{NickName},#{Sex},#{Number},#{Mobile},#{Email},#{Password}
+        ,#{School},#{Department},#{Photo},#{exp},#{CharmValue},#{LanDouNum},#{XinYi},
+        #{Birthday},#{Createby},#{CreateDate}
+        ,#{QianDaoExp},#{ResourceExp},#{taskExp},#{VideoExp},#{TimeExp},#{DiscussExp},#{DianZanExp}
+        ,#{JoinClassExp}
         )
     </insert>
     <select id="queryUserById" resultType="User">
@@ -20,13 +28,21 @@
     <delete id="deleteUser" parameterType="int">
         delete from user where id=#{0}
     </delete>
+
     <update id="updateUser" parameterType="User">
-        update user set userAccount=#{userAccount},sex=#{sex},nickname=#{nickname}
-        ,phone=#{phone},academy=#{academy},updatetime=#{updatetime},password=#{password},
-        updater=#{updater},schoolid=#{schoolid}
+        update user set UserName=#{UserName},NickName=#{NickName},Sex=#{Sex}
+        ,Number=#{Number},Mobile=#{Mobile},Email=#{Email},Password=#{Password},
+        School=#{School},Department=#{Department},Photo=#{Photo},exp=#{exp}
+        ,CharmValue=#{CharmValue},LanDouNum=#{LanDouNum},XinYi=#{XinYi},Birthday=#{Birthday}
+        ,Modifyby=#{Modifyby},ModifyDate=#{ModifyDate}
+        ,QianDaoExp=#{QianDaoExp},ResourceExp=#{ResourceExp},taskExp=#{taskExp},VideoExp=#{VideoExp}
+        ,TimeExp=#{TimeExp},DiscussExp=#{DiscussExp},DianZanExp=#{DianZanExp},JoinClassExp=#{JoinClassExp}
         where id=#{id}
     </update>
-    <update id="resetPassword" parameterType="int">
-        update user set password=123456 where id=#{id}
+    <update id="resetPassword" parameterType="String">
+        update user set Password=123456 where UserName=#{name}
     </update>
+    <select id="queryUseridByPhone" resultType="User">
+        select * from user where Mobile=#{phone}
+    </select>
 </mapper>

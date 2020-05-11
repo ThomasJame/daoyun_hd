@@ -240,8 +240,8 @@ public Tool showlist(HttpServletRequest request) {
 
     }
 
-@GetMapping("user")//根据ID查询用户信息
-public Tool searchUserbyId(HttpServletRequest request) {
+    @GetMapping("user")//根据ID查询用户信息
+    public Tool searchUserbyId(HttpServletRequest request) {
     Tool result = new Tool<>();
     int id=Integer.parseInt(request.getParameter("id"));
     result.setMessage("成功获取用户信息");
@@ -268,11 +268,9 @@ public Tool searchUserbyId(HttpServletRequest request) {
     return result;
 }
 
-    @UserLoginToken
-    @GetMapping("login/info")//根据token 返回用户信息
-    public Tool searchUser(HttpServletRequest request) {
+    @GetMapping("login/info/{token}")//根据token 返回用户信息
+    public Tool searchUser(@PathVariable String token) {
         Tool result = new Tool<>();
-        String token=request.getHeader("token");
         int id=Integer.parseInt(String.valueOf(redisUtil.get(token)));
         result.setMessage("成功获取用户信息");
         result.setFlag("true");

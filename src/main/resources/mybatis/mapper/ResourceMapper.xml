@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.ResourceMapper">
+    <insert id="addResource" parameterType="Resource">
+        insert into resource (ClassID, Title, Description,
+        url, Createby, CreateDate,DownloadNum)
+        values (#{ClassID},#{Title},#{Description},#{url},#{Createby},#{CreateDate},#{DownloadNum})
+    </insert>
+    <select id="getResourceByClassId" resultType="Resource">
+        <choose>
+            <when test="resourceid==0">
+                select *from resource where ClassID=#{classid}
+            </when>
+            <otherwise>
+                select *from resource where ClassID=#{classid}  and resourceid=#{resourceid}
+            </otherwise>
+        </choose>
+    </select>
+    <delete id="deleteResource" parameterType="int">
+        delete from resource where ResourceID=#{0}
+    </delete>
+    <update id="updateResource" parameterType="Resource">
+        update resource set Title=#{Title}
+        ,Description=#{Description},url=#{url},DownloadNum=#{DownloadNum},ModifyDate=#{ModifyDate},Modifyby=#{Modifyby}
+        where ResourceID=#{ResourceID}
+    </update>
+</mapper>

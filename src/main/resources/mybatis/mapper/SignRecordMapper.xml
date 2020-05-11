@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.SignRecordMapper">
+    <insert id="addRecord" parameterType="SignRecord">
+       insert into signinrecord (ClassID, QianDaoDate,
+        QianDaoTime, Weekday, QianDaoType, GesturePwd,
+        Createby, CreateDate)
+        values (#{ClassID},#{QianDaoDate},#{QianDaoTime},#{Weekday},#{QianDaoType},#{GesturePwd}
+        ,#{Createby},#{CreateDate}
+        )
+    </insert>
+    <select id="getQianDaoCode" parameterType="int" resultType="int">
+        select GesturePwd from signinrecord where ClassID=#{id} order by CreateDate DESC limit 1
+    </select>
+</mapper>

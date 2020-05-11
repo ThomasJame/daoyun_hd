@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.TaskMapper">
+    <select id="queryTaskListByClassId" resultType="Task" parameterType="int">
+  <choose>
+      <when test="taskid==0">
+          select * from task where ClassID=#{classid}
+      </when>
+      <otherwise>
+          select * from task where ClassID=#{classid}  and TaskID=#{taskid}
+      </otherwise>
+  </choose>
+    </select>
+    <insert id="addTask" parameterType="Task">
+        insert into task (ClassID, TaskTitle, TaskPicture, TaskExp, Date, ParticipateNum,
+         Content, Information, Createby, CreateDate)
+        values (#{ClassID},#{TaskTitle},#{TaskPicture},#{TaskExp},#{Date}
+        ,#{ParticipateNum},#{Content},#{Information},#{Createby},#{CreateDate}
+        )
+    </insert>
+    <update id="updateTask" parameterType="Task">
+        update task set TaskTitle=#{TaskTitle},TaskPicture=#{TaskPicture},TaskExp=#{TaskExp}
+        ,Date=#{Date},ParticipateNum=#{ParticipateNum},Content=#{Content},Information=#{Information},
+      Modifyby=#{Modifyby},ModifyDate=#{ModifyDate}
+        where TaskID=#{TaskID}
+    </update>
+    <delete id="deleteTask" parameterType="int">
+        delete from task where TaskID=#{0}
+    </delete>
+
+</mapper>

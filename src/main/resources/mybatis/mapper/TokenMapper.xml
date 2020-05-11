@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.Token">
+    <!--//拿到从usercourse 中得到的课程id数组来查询 对应的条目-->
+    <insert id="addToken" parameterType="Token">
+        insert into token (token,UserID,LoginTime,IfOverTime)
+        values (#{token},#{UserID},#{LoginTime},#{IfOverTime}
+        )
+    </insert>
+    <update id="updateToken" parameterType="Token">
+        update token set token=#{token},LoginTime=#{LoginTime}
+        ,IfOverTime=#{IfOverTime}
+        where UserID=#{UserID}
+    </update>
+    <update id="setFlase" parameterType="int">
+        update token set  IfOverTime=0
+        where UserID=#{UserID}
+    </update>
+    <select id="queryTokenbyUserId" resultType="String">
+      select token from token where UserID=#{0} AND IfOverTime=1
+    </select>
+</mapper>

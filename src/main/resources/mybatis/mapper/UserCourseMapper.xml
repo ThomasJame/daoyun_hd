@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.UserCourseMapper">
+    <!--//拿到从usercourse 中得到的课程id数组来查询 对应的条目-->
+    <select id="queryCourseIdbyUserid" resultType="UserCourse">
+    select * from coursemember where UserID=#{0}
+    </select>
+    <select id="queryListbyCourseID" resultType="UserCourse">
+    select * from coursemember where ClassID=#{0}
+    </select>
+    <insert id="userAddCourse" parameterType="UserCourse">
+        insert into coursemember (memberid, classid, membername,
+        photo, stuid, exp, qiandaorate, taskrate, gesturepwd,
+        endtime, createby, createdate)
+        values (#{MemberID},#{ClassID},#{MemberName},#{Photo},#{StuID}
+        ,#{Exp},#{QianDaoRate},#{TaskRate},#{GesturePwd},#{EedTime},#{Createby}
+        ,#{CreateDate}
+        )
+    </insert>
+    <delete id="deletemember" parameterType="UserCourse">
+        delete from coursemember where ClassID=#{ClassID} and MemberID=#{MemberID}
+    </delete>
+
+</mapper>

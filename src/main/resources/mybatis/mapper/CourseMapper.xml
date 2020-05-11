@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.CourseMapper">
+    <select id="queryCourseById" resultType="Course">
+      select * from course where ClassID=#{0}
+    </select>
+    <select id="queryCourseByCreaterId" resultType="Course">
+      select * from course where CreatorID=#{id}
+    </select>
+
+    <select id="queryCourseList" resultType="Course">
+      select * from course
+    </select>
+    <insert id="addCourse" parameterType="Course">
+        insert into course (ClassName,CourseName,CreatorID,Teacher,ClassPic,Term,School,Department
+        ,Textbook,Request,Schedule,Exam,MemberNum,Createby,CreateDate,isOpen,isEnd)
+        values (#{ClassName},#{CourseName},#{CreatorID},#{Teacher},#{ClassPic},#{Term},#{School}
+        ,#{Department},#{Textbook},#{Request},#{Schedule},#{Exam},#{MemberNum},#{Createby}
+        ,#{CreateDate} ,#{isOpen} ,#{isEnd}
+        )
+    </insert>
+    <delete id="deleteCourse" parameterType="int">
+        delete from course where ClassID=#{0}
+    </delete>
+    <update id="updateCourse" parameterType="Course">
+        update course set ClassName=#{ClassName}
+        ,CourseName=#{CourseName},Teacher=#{Teacher},ClassPic=#{ClassPic},Term=#{Term},
+        School=#{School},Department=#{Department},Textbook=#{Textbook},Request=#{Request},
+        Schedule=#{Schedule},Exam=#{Exam},MemberNum=#{MemberNum},ModifyDate=#{ModifyDate}
+        ,Modifyby=#{Modifyby},isEnd=#{isEnd},isOpen=#{isOpen}
+        where ClassID=#{ClassID}
+    </update>
+    <update id="endCourse" parameterType="int">
+        update course set isEnd=1,isOpen=0 where ClassID=#{0}
+    </update>
+</mapper>

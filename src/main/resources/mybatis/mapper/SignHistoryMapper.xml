@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.SignHistoryMapper">
+    <insert id="addSignHistory" parameterType="SignHistory">
+       insert into signinhistory (ClassID, MemberID, Createby, CreateDate,isQianDao)
+        values (#{ClassID},#{MemberID},#{Createby},#{CreateDate},#{isQianDao}
+        )
+    </insert>
+    <select id="qiaodaoHistory" resultType="SignHistory" parameterType="int">
+        select *from signinhistory where ClassID=#{classid} and MemberID=#{userid}
+    </select>
+</mapper>

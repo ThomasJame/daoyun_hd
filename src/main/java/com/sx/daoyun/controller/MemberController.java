@@ -209,4 +209,14 @@ public class MemberController {
         result.setCode(2000);
         return result;
     }
+
+//    @GetMapping("member/detail")
+//    public Tool memberDetail(HttpServletRequest request) {
+//        Tool result = new Tool<>();
+//
+//        result.setMessage("查看成员信息成功");
+//        result.setFlag("true");
+//        result.setCode(2000);
+//        return result;
+//    }
 }

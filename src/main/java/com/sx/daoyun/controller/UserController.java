@@ -28,7 +28,44 @@ public class UserController {
     @Autowired
     private RedisUtil redisUtil;
 //    @UserLoginToken
-    @GetMapping("user/list") ///显示用户列表
+@GetMapping("user/list") ///显示用户列表 查询的
+public Tool showlist(HttpServletRequest request) {
+    Tool result = new Tool<>();
+    result.setMessage("用户管理列表查询成功");
+    result.setFlag("true");
+    result.setCode(200);
+    List<User> userList = userMapper.queryUserList();
+    int count=userList.size();
+    List<String> rolenames = new ArrayList<>();
+    List users = new ArrayList<>();///最终得到的一个个放入
+    for (User user : userList) {
+        int userId = user.getId();
+        List<UserRole> userRoles = transition.getRoleIdByUserId(userId);//拿到用户ID 去查询 用户对应的角色ID
+        for (UserRole userRole : userRoles) {
+            int roleid = userRole.getRoleid();
+            List<Role> roleList = roleMapper.queryRoleNamebyRoleId(roleid);///用角色ID 查询 用户的角色
+            for (Role role : roleList) {
+                ///一层只查询一种角色
+                rolenames.add(role.getName());
+            }
+        }
+        ///得到用户角色数组 rolenames
+        ///resuser 代表 返回中的data
+        Map resuser = new HashMap();
+        resuser.put("roleType", rolenames);
+        resuser.put("id", userId);
+        resuser.put("userAccount", user.getUserName());
+        resuser.put("nickname", user.getNickName());
+
+        users.add(resuser);
+        ///获取用户对应角色 加入到roleType中
+
+    }
+    result.setData(users);
+    return result;
+}
+
+    @GetMapping("user/list/search") ///显示用户列表 查询的
     public Tool queryUserList(HttpServletRequest request) {
         int page=Integer.parseInt(request.getParameter("page"));
         int size=Integer.parseInt(request.getParameter("size"));
@@ -79,6 +116,7 @@ public class UserController {
     @PostMapping("user") //添加用户
     public Tool addUser(HttpServletRequest request) {
         Tool result = new Tool<>();
+//        userAccount nickname roleType
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat();
         String Username = request.getParameter("Username");
         String NickName = request.getParameter("NickName");
@@ -253,9 +291,9 @@ public Tool searchUserbyId(HttpServletRequest request) {
         }
 
         Map resuser = new HashMap();
-        resuser.put("roles", rolenames);
-        resuser.put("id", userId);
-        resuser.put("name", user.getUserName());
+        resuser.put("Roles", rolenames);
+        resuser.put("ID", userId);
+        resuser.put("UserName", user.getUserName());
         result.setData(resuser);
         return result;
     }

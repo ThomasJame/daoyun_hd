@@ -17,8 +17,7 @@ public class RoleController {
     @Autowired
     private RedisUtil redisUtil;
 
-    @UserLoginToken
-    @GetMapping("role/list") ///显示用户列表
+    @GetMapping("role2/list") ///显示用户列表
     public Tool  queryRoleList(){
         Tool result = new Tool<>();
         List<Role> roleList=new ArrayList<>();
@@ -28,7 +27,7 @@ public class RoleController {
              ) {
             Map resrole=new HashMap();
             resrole.put("id",role.getId());
-            resrole.put("name",role.getName());
+            resrole.put("name",role.getRolename());
             resroles.add(resrole);
         }
         result.setData(resroles);
@@ -38,7 +37,6 @@ public class RoleController {
         return result;
     }
 
-    @UserLoginToken
     @GetMapping("role")
     public Tool  queryRoleById(HttpServletRequest request){
         Tool result = new Tool<>();
@@ -54,7 +52,6 @@ public class RoleController {
         return result;
     }
 
-    @UserLoginToken
     @PostMapping("role")
     public Tool  addRole(HttpServletRequest request){
         Tool result = new Tool<>();
@@ -72,7 +69,6 @@ public class RoleController {
         return result;
     }
 
-    @UserLoginToken
     @DeleteMapping("role")
     public Tool  DeleteRole(HttpServletRequest request){
         Tool result = new Tool<>();

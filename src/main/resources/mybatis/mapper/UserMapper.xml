@@ -30,13 +30,7 @@
     </delete>
 
     <update id="updateUser" parameterType="User">
-        update user set UserName=#{UserName},NickName=#{NickName},Sex=#{Sex}
-        ,Number=#{Number},Mobile=#{Mobile},Email=#{Email},Password=#{Password},
-        School=#{School},Department=#{Department},Photo=#{Photo},exp=#{exp}
-        ,CharmValue=#{CharmValue},LanDouNum=#{LanDouNum},XinYi=#{XinYi},Birthday=#{Birthday}
-        ,Modifyby=#{Modifyby},ModifyDate=#{ModifyDate}
-        ,QianDaoExp=#{QianDaoExp},ResourceExp=#{ResourceExp},taskExp=#{taskExp},VideoExp=#{VideoExp}
-        ,TimeExp=#{TimeExp},DiscussExp=#{DiscussExp},DianZanExp=#{DianZanExp},JoinClassExp=#{JoinClassExp}
+        update user set UserName=#{UserName},NickName=#{NickName}
         where id=#{id}
     </update>
     <update id="resetPassword" parameterType="String">
@@ -44,5 +38,31 @@
     </update>
     <select id="queryUseridByPhone" resultType="User">
         select * from user where Mobile=#{phone}
+    </select>
+    <select id="searmap" resultType="User">
+        select *from user
+            <choose>
+                <when test="rolename != null and rolename !=''">
+                    where  id in (
+                    select userid from userrole where roleid in (select id from role where rolename=#{rolename})
+                    )
+                    <if test="nickname != null and nickname !=''">
+                        and NickName=#{nickname}
+                    </if>
+                    <if test="username != null and username !=''">
+                        and username=#{username}
+                    </if>
+                </when>
+                <otherwise>
+                  where 1=1
+                    <if test="nickname != null and nickname !=''">
+                        and NickName=#{nickname}
+                    </if>
+                    <if test="username != null and username !=''">
+                        and username=#{username}
+                    </if>
+                </otherwise>
+            </choose>
+
     </select>
 </mapper>

@@ -16,6 +16,15 @@ public class Role {
     private String creater;
     private Date updatetime;
     private String updater;
+    private String rolename;
+
+    public String getRolename() {
+        return rolename;
+    }
+
+    public void setRolename(String rolename) {
+        this.rolename = rolename;
+    }
 
     public int getId() {
         return id;

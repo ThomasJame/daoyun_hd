@@ -9,6 +9,7 @@ import com.sx.daoyun.pojo.User;
 import com.sx.daoyun.pojo.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,10 +30,10 @@ public class MyController {
     @Autowired
     private Transition transition;
     @UserLoginToken
-    @GetMapping("my")//app根据用户ID获取到我的页面的用户相关信息
-    public Tool searchUser(HttpServletRequest request) {
+    @GetMapping("my/{userId}")//app根据用户ID获取到我的页面的用户相关信息
+    public Tool searchUser(@PathVariable int userid) {
         Tool result = new Tool<>();
-        int id= Integer.parseInt(request.getParameter("id"));
+        int id= userid;
        User user= userMapper.queryUserById(id);
         HashMap map=new HashMap();
         map.put("username",user.getUserName());

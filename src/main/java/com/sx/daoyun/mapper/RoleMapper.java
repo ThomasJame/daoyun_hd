@@ -13,6 +13,7 @@ public interface RoleMapper {
     List <Role> queryRoleNamebyRoleId(int id);
     List <Role> queryRoleList();
     Role queryRoleById(int id);
+    Role queryRoleidByname(String name);
     int addRole(Role role);
     int updateRole(Role role);
     int deleteRole(int id);

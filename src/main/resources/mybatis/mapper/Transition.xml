@@ -8,4 +8,7 @@
     <select id="getRoleIdByUserId" resultType="UserRole">
       select roleid from userrole where userid=#{0}
     </select>
+    <delete id="deleteuserrole" parameterType="int">
+        delete from userrole where  userid=#{userid}
+    </delete>
 </mapper>

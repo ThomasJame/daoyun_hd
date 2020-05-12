@@ -19,4 +19,5 @@ public interface UserMapper {
     int resetPassword(String name);
     User queryUserByName(String name);
     User queryUseridByPhone(String phone);
+    List<User> searmap(String username,String nickname,String rolename);
 }

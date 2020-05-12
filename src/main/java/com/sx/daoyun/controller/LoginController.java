@@ -19,9 +19,9 @@ public class LoginController {
     @PostMapping("login/pwd")  //校验密码
     public  Tool verifyPassword(@RequestBody Map<String, Object> userMap){
         Tool result = new Tool<>();
-        String name = (String) userMap.get("userId");
+        int  id = (int) userMap.get("userId");
         String password=(String) userMap.get("password");
-        User user =userMapper.queryUserByName(name);
+        User user =userMapper.queryUserById(id);
          if (password.equals(user.getPassword())){
              result.setMessage("密码正确");
              result.setFlag("true");
@@ -39,9 +39,9 @@ public class LoginController {
     @PutMapping("login/pwd")  //修改密码
     public  Tool updatePassword(@RequestBody Map<String, Object> userMap){
         Tool result = new Tool<>();
-        String name = (String) userMap.get("userId");
+        int  id = (int) userMap.get("userId");
         String password=(String) userMap.get("password");
-        User user=userMapper.queryUserByName(name);
+        User user =userMapper.queryUserById(id);
         user.setPassword(password);
         userMapper.updateUser(user);
         result.setMessage("修改密码成功");

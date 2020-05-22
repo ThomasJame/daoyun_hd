@@ -11,4 +11,12 @@
     <delete id="deleteuserrole" parameterType="int">
         delete from userrole where  userid=#{userid}
     </delete>
+    <update id="updateuserrole" parameterType="UserRole">
+        update userrole set
+        userid=#{userid},roleid=#{roleid}
+        where id=#{id}
+    </update>
+    <select id="queryUserRoleId" resultType="int">
+        select id from userrole where userid=#{userid}
+    </select>
 </mapper>

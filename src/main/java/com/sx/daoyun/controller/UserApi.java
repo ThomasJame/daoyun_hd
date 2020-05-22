@@ -71,43 +71,50 @@ public class UserApi {
         }
     }
 
-    @GetMapping("/login")
-    public Tool getMessage(HttpServletRequest request) {
+    @GetMapping("/login/{telephone}")
+    public Tool getMessage(@PathVariable("telephone") String  telephone) {
         Tool result = new Tool<>();
-        String phone=request.getParameter("phone");
-//        String token1=request.getHeader("token");
-//        int userid=Integer.parseInt(String.valueOf(redisUtil.get(token1)));
-//        User user2 = userMapper.queryUserById(userid);
-//        String creater=user2.getUserName();
-       User user=userService.queryUseridByPhone(phone);
+       User user=userService.queryUseridByPhone(telephone);
 
         if (user == null) {
             //在用户信息表新增一条记录，默认用户名称为手机号，角色默认学生。后续可以在我的那里进行角色切换
             System.out.println("sdahhsdna");
             User user1 =new User();
-            user1.setUserName(phone);
-            user1.setMobile(phone);
-            user1.setPassword("123");
+            user1.setUserName(telephone);
+            user1.setMobile(telephone);
+            user1.setPassword("123456");
             userService.addUser(user1);
             UserRole userRole=new UserRole();
             userRole.setRoleid(2);
-            userRole.setUserid(userMapper.queryUseridByPhone(phone).getId());
+            userRole.setUserid(userMapper.queryUseridByPhone(telephone).getId());
             userRole.setCreater("系统自动生成");
             userRole.setCreatetime(new Date());
             transition.adduserrole(userRole);
+
+            User usernew=userService.queryUseridByPhone(telephone);
+            String token = tokenService.getToken(usernew);
+            redisUtil.set(token, usernew.getId(),259200);//设置3天
+            com.sx.daoyun.pojo.Token token1= new com.sx.daoyun.pojo.Token();
+            token1.setToken(token);
+            token1.setUserID(usernew.getId());
+            token1.setIfOverTime(1);
+            token1.setLoginTime(new Date());
+            tokenmapper.setFlase(usernew.getId());
+            tokenmapper.addToken(token1);
+
+            HashMap map = new HashMap();
+            map.put("token", token);
+            result.setData(map);
             result.setMessage("默认用户名称为手机号，角色默认学生密码为123");
             result.setFlag("true");
-            result.setCode(200);
+            result.setCode(2000);
             return  result;
         } else {
-            result.setMessage("成功获取用户信息");
-            result.setFlag("true");
-            result.setCode(200);
             int id = user.getId();
             String token = tokenmapper.queryTokenbyUserId(id);
             result.setMessage("根据手机号获取token值");
             result.setFlag("true");
-            result.setCode(200);
+            result.setCode(2000);
             HashMap map = new HashMap();
             map.put("token", token);
             result.setData(map);
@@ -115,10 +122,9 @@ public class UserApi {
         }
     }
 
-    @PostMapping("login/logout")
+    @PostMapping("login/logout/{token}")
     public Tool logout(HttpServletRequest request) {
         Tool result = new Tool<>();
-
         return result;
     }
 }

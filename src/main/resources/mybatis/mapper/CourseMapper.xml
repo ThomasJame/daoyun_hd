@@ -12,6 +12,9 @@
 
     <select id="queryCourseList" resultType="Course">
       select * from course
+        <if test="cname != null and cname !=''">
+            where CourseName like CONCAT('%',#{cname},'%')
+        </if>
     </select>
     <insert id="addCourse" parameterType="Course">
         insert into course (ClassName,CourseName,CreatorID,Teacher,ClassPic,Term,School,Department

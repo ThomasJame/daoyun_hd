@@ -30,6 +30,15 @@ public class Course {
     private Date CreateDate;
     private String Modifyby;
     private Date ModifyDate;
+    private int State;
+
+    public int getState() {
+        return State;
+    }
+
+    public void setState(int state) {
+        State = state;
+    }
 
     public int getClassID() {
         return ClassID;

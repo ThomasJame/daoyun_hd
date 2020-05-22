@@ -15,4 +15,5 @@ public interface UserCourseMapper {
     int userAddCourse(UserCourse userCourse);
     List<UserCourse> queryListbyCourseID(int courseid);
     int deletemember(UserCourse userCourse);
+    UserCourse querybystudentid(int stuid,int clasid);
 }

@@ -244,10 +244,10 @@ public class UserController {
 
 //    @UserLoginToken
     @PutMapping("user/pwd")
-    public Tool resetPassword(HttpServletRequest request) {
+    public Tool resetPassword(@RequestBody Map<String,Object> userMap) {
         Tool result = new Tool<>();
-        String username=request.getParameter("username");
-        userMapper.resetPassword(username);
+        String phone=(String)userMap.get("userAccount");
+        userMapper.resetPassword(phone);
         result.setMessage("密码已重置:初始密码为123456");
         result.setFlag("true");
         result.setCode(2000);

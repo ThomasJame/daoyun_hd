@@ -21,7 +21,7 @@ public class RoleController {
     public Tool  queryRoleList(){
         Tool result = new Tool<>();
         List<Role> roleList=new ArrayList<>();
-        roleList=roleMapper.queryRoleList();
+        roleList=roleMapper.queryRoleList(null);
         List resroles=new ArrayList();
         for (Role role:roleList
              ) {
@@ -37,14 +37,13 @@ public class RoleController {
         return result;
     }
 
-    @GetMapping("role")
-    public Tool  queryRoleById(HttpServletRequest request){
+    @GetMapping("role/{id}")
+    public Tool  queryRoleById(@PathVariable("id") int id){
         Tool result = new Tool<>();
-        int id=Integer.parseInt(request.getParameter("id"));
         Role role=roleMapper.queryRoleById(id);
         Map res=new HashMap();
         res.put("id",role.getId());
-        res.put("name",role.getName());
+        res.put("name",role.getRolename());
         result.setData(res);
         result.setCode(2000);
         result.setFlag("true");
@@ -53,15 +52,11 @@ public class RoleController {
     }
 
     @PostMapping("role")
-    public Tool  addRole(HttpServletRequest request){
+    public Tool  addRole(@RequestBody Map<String,Object> rolemap){
         Tool result = new Tool<>();
+        String roletype=(String)rolemap.get("name");
         Role role=new Role();
-        String name=request.getParameter("name");
-        String creater=String.valueOf(redisUtil.get(request.getHeader("token")));
-        Date date=new Date();
-        role.setName(name);
-        role.setCreater(creater);
-        role.setCreatetime(date);
+        role.setRolename(roletype);
         roleMapper.addRole(role);
         result.setCode(2000);
         result.setFlag("true");
@@ -69,10 +64,9 @@ public class RoleController {
         return result;
     }
 
-    @DeleteMapping("role")
-    public Tool  DeleteRole(HttpServletRequest request){
+    @DeleteMapping("role/{id}")
+    public Tool  DeleteRole(@PathVariable("id") int id){
         Tool result = new Tool<>();
-        int id=Integer.parseInt(request.getParameter("id"));
         roleMapper.deleteRole(id);
         result.setCode(2000);
         result.setFlag("true");
@@ -80,19 +74,13 @@ public class RoleController {
         return result;
     }
 
-    @UserLoginToken
-    @PutMapping("role")
-    public Tool  updateRole(HttpServletRequest request){
+    @PutMapping("role/{id}")
+    public Tool  updateRole(@RequestBody Map<String,Object> rolemap,@PathVariable("id") int id){
         Tool result = new Tool<>();
-        int id=Integer.parseInt(request.getParameter("id"));
+        String roletype=(String)rolemap.get("name");
         Role role=new Role();
         role.setId(id);
-        String name=request.getParameter("name");
-        String updater=String.valueOf(redisUtil.get(request.getHeader("token")));
-        Date date=new Date();
-        role.setName(name);
-        role.setUpdater(updater);
-        role.setUpdatetime(date);
+        role.setRolename(roletype);
         roleMapper.updateRole(role);
         result.setCode(2000);
         result.setFlag("true");
@@ -101,30 +89,34 @@ public class RoleController {
     }
 
 
-    @GetMapping("role/list/search")
-    public Tool  searchrolebypo(HttpServletRequest request){
+    @PostMapping("role/list/search/{page}/{size}")
+    public Tool  searchrolebypo(@PathVariable("page") int page,@PathVariable("size") int size,
+            @RequestBody Map<String,Object> searchmap){
         Tool result = new Tool<>();
-        int page=Integer.parseInt(request.getParameter("page"));
-        int size=Integer.parseInt(request.getParameter("size"));
+        Map<String,Object> rolemap=(Map<String, Object>) searchmap.get("searchMap");
+        String roletype=(String)rolemap.get("roleType");
         int begin=(page-1)*size;
-        int end=page*size;
-        List<Role> roleList=roleMapper.queryRoleList();
+        int end=page*size-1;
+        List<Role> roleList=roleMapper.queryRoleList(roletype);
         int count=roleList.size();
         List<Role> roleList1=new ArrayList<>();
         if (end>=count-1){
-            roleList1=roleList.subList(begin,count-1);
+            roleList1=roleList.subList(begin,count);
         }else {
-            roleList1=roleList.subList(begin,end);
+            roleList1=roleList.subList(begin,end+1);
         }
         List resroles=new ArrayList();
         for (Role role:roleList1
         ) {
             Map resrole=new HashMap();
             resrole.put("id",role.getId());
-            resrole.put("name",role.getName());
+            resrole.put("name",role.getRolename());
             resroles.add(resrole);
         }
-        result.setData(resroles);
+        HashMap res=new HashMap();
+        res.put("rows",resroles);
+        res.put("total",count);
+        result.setData(res);
         result.setCode(2000);
         result.setFlag("true");
         result.setMessage("角色分页查询成功");

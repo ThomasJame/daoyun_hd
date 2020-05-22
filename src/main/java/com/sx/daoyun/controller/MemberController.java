@@ -1,23 +1,14 @@
 package com.sx.daoyun.controller;
 
-import com.sx.daoyun.mapper.SignHistoryMapper;
-import com.sx.daoyun.mapper.SignRecordMapper;
-import com.sx.daoyun.pojo.SignHistory;
-import com.sx.daoyun.pojo.SignRecord;
-import com.sx.daoyun.mapper.UserCourseMapper;
-import com.sx.daoyun.mapper.UserMapper;
-import com.sx.daoyun.pojo.User;
-import com.sx.daoyun.pojo.UserCourse;
+import com.sx.daoyun.mapper.*;
+import com.sx.daoyun.pojo.*;
 import com.sx.daoyun.tool.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 @RestController
 public class MemberController {
@@ -31,66 +22,84 @@ public class MemberController {
     private SignRecordMapper signRecordMapper;
     @Autowired
     private SignHistoryMapper signHistoryMapper;
+    @Autowired
+    private UserCourseTrueMapper userCourseTrueMapper;
+    @Autowired
+    private TaskMapper taskMapper;
 
-    @PostMapping("member") //用户加入班课
-    public Tool userAddCourse(HttpServletRequest request) {
+    @PostMapping("member/{classID}/{userID}") //用户加入班课
+    public Tool userAddCourse(@PathVariable("classID") int classID,
+                              @PathVariable("userID") int userID) {
         Tool result = new Tool<>();
-        int userid = Integer.parseInt(request.getParameter("userID"));
-        int courseid = Integer.parseInt(request.getParameter("classID"));
+        int userid = userID;
+        int courseid = classID;
         String MemberName = userMapper.queryUserById(userid).getUserName();
         int number = userMapper.queryUserById(userid).getNumber();
         UserCourse userCourse = new UserCourse();
         userCourse.setClassID(courseid);
-        userCourse.setMemberID(userid);
         userCourse.setCreateDate(new Date());
-        userCourse.setMemberName(MemberName);
-        userCourse.setStuID(number);
-        int id = Integer.parseInt(String.valueOf(redisUtil.get(request.getHeader("token"))));
-        User createrUser = userMapper.queryUserById(id);
-        String creater = createrUser.getUserName();
-        userCourse.setCreateby(creater);
+        userCourse.setMemberID(userid);
         userCourseMapper.userAddCourse(userCourse);
+
+        UserCourseTrue userCoursetrue=new UserCourseTrue();
+        userCoursetrue.setUserID(userid);
+        userCoursetrue.setClassID(classID);
+        userCoursetrue.setCreateDate(new Date());
+        userCourseTrueMapper.adduserCourseTrue(userCoursetrue);
         result.setMessage("用户加入班课成功");
-        result.setFlag("flase");
+        result.setFlag("true");
         result.setCode(2000);
         return result;
     }
 
-    @GetMapping("member/list")
-    public Tool memberList(HttpServletRequest request) {
+    @PostMapping("member/{id}/{page}/{size}")
+    public Tool memberList(@PathVariable("id") int id,
+                           @PathVariable("page") int page,
+                           @PathVariable("size") int size,
+                           @RequestBody Map<String,Object> searchmap) {
         Tool result = new Tool<>();
-        int courseid = Integer.parseInt(request.getParameter("courseid"));
-        List<UserCourse> UserCourses = userCourseMapper.queryListbyCourseID(courseid);
+        String studentnumber=(String) searchmap.get("info");//学号
+        int begin=(page-1)*size;
+        int end=page*size-1;
+        List<UserCourseTrue> userCourseTrueList = userCourseTrueMapper.querylistbybid(id,studentnumber);//得到课程对应的所有学生id
+        System.out.println(userCourseTrueList);
+        int count=userCourseTrueList.size();
+        List<UserCourseTrue> userCourseTrueList1=new ArrayList<>();
+        if (end>=count-1){
+            userCourseTrueList1=userCourseTrueList.subList(begin,count);
+        }else {
+            userCourseTrueList1=userCourseTrueList.subList(begin,end+1);
+        }
         HashMap resmap = new HashMap();
-        int count = UserCourses.size();
         resmap.put("total", count);
         List users = new ArrayList();//用于放封装好的学生数组
-        for (UserCourse userCourse : UserCourses) {
+        for (UserCourseTrue userCourseTrue : userCourseTrueList1) {
             HashMap map = new HashMap();
-            map.put("stuID", userCourse.getStuID());
-            map.put("stuName", userCourse.getMemberName());
-            map.put("exp", userCourse.getExp());
+            map.put("stuID", userMapper.queryUserById(userCourseTrue.getUserID()).getNumber());
+            map.put("memberName", userMapper.queryUserById(userCourseTrue.getUserID()).getUserName());
+            map.put("exp", userCourseMapper.querybystudentid(userCourseTrue.getUserID(),id).getExp());
+            System.out.println("3");
             users.add(map);
         }
         resmap.put("rows", users);
         result.setData(resmap);
         result.setMessage("根据班课id返回学生列表");
-        result.setFlag("flase");
+        result.setFlag("true");
         result.setCode(2000);
         return result;
     }
 
-    @DeleteMapping("member")
-    public Tool deletemember(HttpServletRequest request) {
+    @DeleteMapping("member/{classid}/{stunumber}")
+    public Tool deletemember(@PathVariable("classid") int classid,
+                             @PathVariable("stunumber") int stunumber) {
         Tool result = new Tool<>();
-        int userid = Integer.parseInt(request.getParameter("userID"));
-        int courseid = Integer.parseInt(request.getParameter("classID"));
+
         UserCourse userCourse = new UserCourse();
-        userCourse.setMemberID(userid);
-        userCourse.setClassID(courseid);
+        userCourse.setMemberID(userMapper.queryuserbynumber(stunumber).getId());
+        userCourse.setClassID(classid);
         userCourseMapper.deletemember(userCourse);
         result.setMessage("成员退出班课");
-        result.setFlag("flase");
+        result.setFlag("true");
         result.setCode(2000);
         return result;
     }
@@ -210,13 +219,29 @@ public class MemberController {
         return result;
     }
 
-//    @GetMapping("member/detail")
-//    public Tool memberDetail(HttpServletRequest request) {
-//        Tool result = new Tool<>();
-//
-//        result.setMessage("查看成员信息成功");
-//        result.setFlag("true");
-//        result.setCode(2000);
-//        return result;
-//    }
+    @GetMapping("member/detail/{classid}/{stunumber}")
+    public Tool memberDetail(@PathVariable("classid") int classid,
+                             @PathVariable("stunumber") int stunumber) {
+        Tool result = new Tool<>();
+       User user= userMapper.queryuserbynumber(stunumber);
+        UserCourse userCourse=userCourseMapper.querybystudentid(user.getId(),classid);
+        HashMap map=new HashMap();
+        map.put("stuID",user.getNumber());
+        map.put("memberName",user.getUserName());
+        double ttotal=taskMapper.queryTaskListByClassId(classid,0).size();
+        double min=taskMapper.queryminetask(user.getNumber()).size();
+        map.put("taskDetail",(min/ttotal)*100+"%");
+        map.put("exp",userCourse.getExp());
+        double total=signHistoryMapper.qiaodaoHistory(user.getId(),classid).size();
+        System.out.println(total);
+        System.out.println(1);
+        double attend=signHistoryMapper.qiaodaoHistory1(user.getId(),classid).size();
+        double attendrate=(attend/total)*100;
+        map.put("attendanceRate",attendrate+"%");
+        result.setData(map);
+        result.setMessage("查看成员信息成功");
+        result.setFlag("true");
+        result.setCode(2000);
+        return result;
+    }
 }

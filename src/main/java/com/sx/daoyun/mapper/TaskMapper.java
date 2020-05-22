@@ -14,4 +14,5 @@ public interface TaskMapper {
     List<Task> queryTaskListByClassId(int classid,int taskid);
     int updateTask(Task task);
     int deleteTask(int taskid);
+    List<Task> queryminetask(int id);
 }

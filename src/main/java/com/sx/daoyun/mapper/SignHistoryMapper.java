@@ -12,4 +12,5 @@ import java.util.List;
 public interface SignHistoryMapper {
     int addSignHistory(SignHistory signHistory);
     List<SignHistory> qiaodaoHistory(int userid,int classid);
+    List<SignHistory>qiaodaoHistory1(int userid,int classid);
 }

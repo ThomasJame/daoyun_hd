@@ -15,6 +15,6 @@ public interface CourseMapper {
     int addCourse(Course user);
     int updateCourse(Course user);
     int deleteCourse(int id);
-    List<Course> queryCourseList();//查询全部课程列表
+    List<Course> queryCourseList(String cname);//查询全部课程列表
     int endCourse(int id);
 }

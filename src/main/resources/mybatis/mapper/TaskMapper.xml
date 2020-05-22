@@ -13,6 +13,9 @@
       </otherwise>
   </choose>
     </select>
+    <select id="queryminetask" resultType="Task">
+        select *from task where TaskPicture=#{0}
+    </select>
     <insert id="addTask" parameterType="Task">
         insert into task (ClassID, TaskTitle, TaskPicture, TaskExp, Date, ParticipateNum,
          Content, Information, Createby, CreateDate)

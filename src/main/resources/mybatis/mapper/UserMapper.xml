@@ -34,7 +34,7 @@
         where id=#{id}
     </update>
     <update id="resetPassword" parameterType="String">
-        update user set Password=123456 where UserName=#{name}
+        update user set Password=123456 where Mobile=#{phone}
     </update>
     <select id="queryUseridByPhone" resultType="User">
         select * from user where Mobile=#{phone}
@@ -64,5 +64,8 @@
                 </otherwise>
             </choose>
 
+    </select>
+    <select id="queryuserbynumber" resultType="User">
+        select *from user where Number=#{0}
     </select>
 </mapper>

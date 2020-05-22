@@ -14,4 +14,7 @@ public interface Transition {
     List<UserRole> getRoleIdByUserId(int id);
     int adduserrole(UserRole userRole);
     int deleteuserrole(int id);
+    int queryUserRoleId(int userid);
+    int updateuserrole(UserRole userRole);
+
 }

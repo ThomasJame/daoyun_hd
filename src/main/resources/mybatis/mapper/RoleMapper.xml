@@ -7,21 +7,24 @@
     select * from role where id=#{0}
      </select>
     <select id="queryRoleList" resultType="Role">
-      select * from role;
+      select * from role
+        <if test="roletype != null and roletype !=''">
+            where rolename=#{roletype}
+        </if>
     </select>
     <select id="queryRoleById" resultType="Role">
     select * from role where id=#{0}
     </select>
     <insert id="addRole" parameterType="Role">
-        insert into role (createtime,creater,updatetime,updater,name)
-        values (#{createtime},#{creater},#{updatetime},#{updater},#{name})
+        insert into role (rolename)
+        values (#{rolename})
     </insert>
     <delete id="deleteRole" parameterType="int">
         delete from role where id=#{0}
     </delete>
     <update id="updateRole" parameterType="Role">
-        update role set updatetime=#{updatetime}
-        ,updater=#{updater},name=#{name}
+        update role set
+        rolename=#{rolename}
         where id=#{id}
     </update>
     <select id="queryRoleidByname" parameterType="String" resultType="Role">

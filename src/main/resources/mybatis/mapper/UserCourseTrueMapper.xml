@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.UserCourseTrueMapper">
+    <!--//拿到从usercourse 中得到的课程id数组来查询 对应的条目-->
+    <select id="querylistbybid" resultType="UserCourseTrue">
+        select *from usercourse
+        where ClassID=#{courseid}
+        <if test="studentnumber != null and studentnumber !='' and studentnumber !=0" >
+        AND UserID  in (select id from user where Number like CONCAT('%',#{studentnumber},'%'))
+        </if>
+    </select>
+    <insert id="adduserCourseTrue" parameterType="UserCourseTrue">
+    insert into usercourse (UserID, ClassID,CreateDate)
+        values (#{UserID},#{ClassID},#{CreateDate}
+        )
+    </insert>
+    <delete id="deletemember" parameterType="UserCourseTrue">
+        delete from usercourse where ClassID=#{ClassID} and UserID=${UserID}
+    </delete>
+</mapper>

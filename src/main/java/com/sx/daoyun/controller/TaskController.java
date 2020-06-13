@@ -1,5 +1,6 @@
 package com.sx.daoyun.controller;
 
+import com.sx.daoyun.mapper.CourseMapper;
 import com.sx.daoyun.mapper.TaskMapper;
 import com.sx.daoyun.mapper.UserMapper;
 import com.sx.daoyun.pojo.Task;
@@ -10,10 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 @RestController
 public class TaskController {
@@ -23,62 +21,50 @@ public class TaskController {
     private RedisUtil redisUtil;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private CourseMapper courseMapper;
 
-    @PostMapping("task") //增加课程
-    public Tool addTask(HttpServletRequest request) {
+    @PostMapping("task/{classID}")
+    public Tool addTask(@PathVariable("classID") int classid,
+                        @RequestBody Map<String,Object> addinfo) {
         Tool result = new Tool<>();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
-        int classid = Integer.parseInt(request.getParameter("classID"));
-        int TaskExp = Integer.parseInt(request.getParameter("TaskExp"));
-        int ParticipateNum = Integer.parseInt(request.getParameter("ParticipateNum"));
-        String TaskTitle = request.getParameter("TaskTitle");
-        String TaskPicture = request.getParameter("TaskPicture");
-        String Content = request.getParameter("Content");
-        String Information = request.getParameter("Information");
-        int userid = Integer.parseInt(String.valueOf(redisUtil.get(request.getHeader("token"))));
-        String creater = userMapper.queryUserById(userid).getUserName();
+//        {"TaskTitle":"Token","TaskExp":"10","Content":"使用Token实现用户的身份验证"}
+        int TaskExp = Integer.valueOf((String)addinfo.get("TaskExp"));
+        String TaskTitle =(String) addinfo.get("TaskTitle");
+        String Content = (String) addinfo.get("Content");
+        String time=(String)addinfo.get("time");
         Task task = new Task();
-        try {
+
             task.setClassID(classid);
             task.setTaskTitle(TaskTitle);
             task.setTaskExp(TaskExp);
-            task.setTaskPicture(TaskPicture);
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+//            Date  currdate = new Date();
+//            Calendar ca = Calendar.getInstance();
+//            ca.add(Calendar.DATE, 7);// num为增加的天数，可以改变的
+//            currdate = ca.getTime();
+        try {
+            task.setDate(simpleDateFormat.parse(time));
+        }catch (Exception e){
+
+        }
             task.setCreateDate(new Date());
-            task.setParticipateNum(ParticipateNum);
             task.setContent(Content);
-            task.setInformation(Information);
-            task.setCreateby(creater);
-            task.setDate(simpleDateFormat.parse(request.getParameter("Date")));
             taskMapper.addTask(task);
             result.setMessage("新增任务成功");
             result.setFlag("true");
             result.setCode(2000);
-        } catch (Exception e) {
-            task.setClassID(classid);
-            task.setTaskTitle(TaskTitle);
-            task.setTaskExp(TaskExp);
-            task.setTaskPicture(TaskPicture);
-            task.setDate(new Date());
-            task.setParticipateNum(ParticipateNum);
-            task.setContent(Content);
-            task.setInformation(Information);
-            task.setCreateby(creater);
-            task.setCreateDate(new Date());
-            taskMapper.addTask(task);
-            result.setMessage("日期格式异常 默认未 当前日期");
-            result.setFlag("flase");
-            result.setCode(2000);
-        }
-        return result;
+            return result;
     }
 
-    @GetMapping("task/list")
-    public Tool addUser(HttpServletRequest request) {
+    @GetMapping("task/list/{classid}")
+    public Tool queryTaskList(@PathVariable("classid") int classid) {
         Tool result = new Tool<>();
-        int classid = Integer.parseInt(request.getParameter("id"));
         List<Task> taskList = taskMapper.queryTaskListByClassId(classid, 0);
+        System.out.println(taskList);
         HashMap res = new HashMap();
         List restasklist = new ArrayList();
+        String teacher =courseMapper.queryCourseById(classid).getTeacher();
         for (Task task : taskList) {
 //            任务ID、任务标题、任务经验值、截止时间
             HashMap map = new HashMap();
@@ -86,91 +72,62 @@ public class TaskController {
             map.put("title", task.getTaskTitle());
             map.put("exp", task.getTaskExp());
             map.put("date", task.getDate());
+            map.put("teacher",teacher);
             restasklist.add(map);
         }
         res.put("total", taskList.size());
-        res.put("res", restasklist);
+        res.put("rows", restasklist);
         result.setData(res);
         result.setMessage("根据课程id获取任务列表成功");
         result.setFlag("true");
-        result.setErrCode(200);
+        result.setErrCode(2000);
         return result;
     }
 
-    @GetMapping("task2")
-    public Tool taskDetail(HttpServletRequest request) {
+    @GetMapping("task2/{classid}/{taskid}")
+    public Tool taskDetail(@PathVariable("classid") int classid,
+                           @PathVariable("taskid") int taskid) {
         Tool result = new Tool<>();
-        int classid = Integer.parseInt(request.getParameter("classid"));
-        int taskid = Integer.parseInt(request.getParameter("taskid"));
         List<Task> taskList = taskMapper.queryTaskListByClassId(classid, taskid);
         HashMap map = new HashMap();
         map.put("title", taskList.get(0).getTaskTitle());
         map.put("exp", taskList.get(0).getTaskExp());
         map.put("content", taskList.get(0).getContent());
+        map.put("id",taskList.get(0).getTaskID());
         result.setData(map);
         result.setMessage("任务详情查看成功");
         result.setFlag("true");
-        result.setErrCode(200);
+        result.setErrCode(2000);
         return result;
     }
 
-    @PutMapping("task")
-    public Tool updateTask(HttpServletRequest request) {
+    @PutMapping("task/{classid}/{taskid}")
+    public Tool updateTask(@PathVariable("classid") int classid,
+                           @PathVariable("taskid") int taskid,
+                           @RequestBody Map<String,Object> upmapper) {
         Tool result = new Tool<>();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
-        int classid = Integer.parseInt(request.getParameter("classid"));
-        int taskid= Integer.parseInt(request.getParameter("taskid"));
-        int TaskExp = Integer.parseInt(request.getParameter("TaskExp"));
-        int ParticipateNum = Integer.parseInt(request.getParameter("ParticipateNum"));
-        String TaskTitle = request.getParameter("TaskTitle");
-        String TaskPicture = request.getParameter("TaskPicture");
-        String Content = request.getParameter("Content");
-        String Information = request.getParameter("Information");
-        int userid = Integer.parseInt(String.valueOf(redisUtil.get(request.getHeader("token"))));
-        String updater = userMapper.queryUserById(userid).getUserName();
+//        {"id":3,"title":"任务3","exp":3,"content":"2314124"}
+        int TaskExp = (int)upmapper.get("exp");
+        String TaskTitle = (String)upmapper.get("title");
+        String Content = (String)upmapper.get("content");
         Task task = new Task();
-        try {
-            task.setClassID(classid);
-            task.setTaskID(taskid);
             task.setTaskTitle(TaskTitle);
             task.setTaskExp(TaskExp);
-            task.setTaskPicture(TaskPicture);
-            task.setModifyDate(new Date());
-            task.setParticipateNum(ParticipateNum);
             task.setContent(Content);
-            task.setInformation(Information);
-            task.setModifyby(updater);
-            task.setDate(simpleDateFormat.parse(request.getParameter("Date")));
+            task.setTaskID(taskid);
+            task.setClassID(classid);
             taskMapper.updateTask(task);
             result.setMessage("修改任务成功");
             result.setFlag("true");
             result.setCode(2000);
-        } catch (Exception e) {
-            task.setClassID(classid);
-            task.setTaskID(taskid);
-            task.setTaskTitle(TaskTitle);
-            task.setTaskExp(TaskExp);
-            task.setTaskPicture(TaskPicture);
-            task.setModifyDate(new Date());
-            task.setParticipateNum(ParticipateNum);
-            task.setContent(Content);
-            task.setInformation(Information);
-            task.setModifyby(updater);
-            task.setDate(new Date());
-            taskMapper.updateTask(task);
-            result.setMessage("日期格式异常 默认未 当前日期");
-            result.setFlag("flase");
-            result.setCode(2000);
-            result.setErrCode(500);
-        }
-        return result;
+            return result;
     }
 
-    @DeleteMapping("task")
-    public Tool deleteTask(HttpServletRequest request) {
+    @DeleteMapping("task/{classID}/{taskID}")
+    public Tool deleteTask(@PathVariable("classID") int classID
+    ,@PathVariable("taskID") int taskID) {
         Tool result = new Tool<>();
-        int taskid= Integer.parseInt(request.getParameter("taskid"));
-        taskMapper.deleteTask(taskid);
+        taskMapper.deleteTask(classID,taskID);
         result.setMessage("删除任务成功");
         result.setFlag("true");
         result.setCode(2000);

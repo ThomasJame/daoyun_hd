@@ -16,15 +16,15 @@
     select * from role where id=#{0}
     </select>
     <insert id="addRole" parameterType="Role">
-        insert into role (rolename)
-        values (#{rolename})
+        insert into role (rolename,updater)
+        values (#{rolename},#{updater})
     </insert>
     <delete id="deleteRole" parameterType="int">
         delete from role where id=#{0}
     </delete>
     <update id="updateRole" parameterType="Role">
         update role set
-        rolename=#{rolename}
+        rolename=#{rolename},updater=#{updater}
         where id=#{id}
     </update>
     <select id="queryRoleidByname" parameterType="String" resultType="Role">

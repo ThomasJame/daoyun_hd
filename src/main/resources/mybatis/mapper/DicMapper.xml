@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sx.daoyun.mapper.DicMapper">
+    <insert id="addDic" parameterType="Dic">
+        insert into dictionary (DataName, DataType, CreateDate)
+        values (#{DataName},#{DataType},#{CreateDate}
+        )
+    </insert>
+    <select id="searchlist" resultType="Dic">
+        select *from dictionary
+        <if test="dictionaryName!=null and dictionaryName !=''">
+            where DataName like CONCAT('%',#{dictionaryName},'%')
+        </if>
+    </select>
+    <update id="update" parameterType="Dic">
+         update dictionary set DataName=#{DataName}
+        ,DataType=#{DataType},ModifyDate=#{ModifyDate}
+        where DataID=#{DataID}
+    </update>
+    <select id="searchdictone" resultType="Dic">
+        select *from dictionary where DataID=#{0}
+    </select>
+    <delete id="deletedic" parameterType="int">
+        delete from dictionary where DataID=#{0}
+    </delete>
+</mapper>

@@ -42,8 +42,14 @@ public class RoleController {
         Tool result = new Tool<>();
         Role role=roleMapper.queryRoleById(id);
         Map res=new HashMap();
+        ArrayList rights = new ArrayList();
+        for (char c: role.getUpdater().toCharArray()) {
+            if (c!='['&&c!=']'&&c!=','&&c!=' ')
+                rights.add(c-'0');
+        }
         res.put("id",role.getId());
         res.put("name",role.getRolename());
+        res.put("right",rights);
         result.setData(res);
         result.setCode(2000);
         result.setFlag("true");
@@ -55,8 +61,10 @@ public class RoleController {
     public Tool  addRole(@RequestBody Map<String,Object> rolemap){
         Tool result = new Tool<>();
         String roletype=(String)rolemap.get("name");
+        ArrayList right=(ArrayList) rolemap.get("right");
         Role role=new Role();
         role.setRolename(roletype);
+        role.setUpdater(right.toString());
         roleMapper.addRole(role);
         result.setCode(2000);
         result.setFlag("true");
@@ -78,8 +86,10 @@ public class RoleController {
     public Tool  updateRole(@RequestBody Map<String,Object> rolemap,@PathVariable("id") int id){
         Tool result = new Tool<>();
         String roletype=(String)rolemap.get("name");
+        ArrayList right=(ArrayList) rolemap.get("right");
         Role role=new Role();
         role.setId(id);
+        role.setUpdater(right.toString());
         role.setRolename(roletype);
         roleMapper.updateRole(role);
         result.setCode(2000);
@@ -108,9 +118,15 @@ public class RoleController {
         List resroles=new ArrayList();
         for (Role role:roleList1
         ) {
+            ArrayList rights = new ArrayList();
+            for (char c: role.getUpdater().toCharArray()) {
+                if (c!='['&&c!=']'&&c!=','&&c!=' ')
+                    rights.add(c-'0');
+            }
             Map resrole=new HashMap();
             resrole.put("id",role.getId());
             resrole.put("name",role.getRolename());
+            resrole.put("right",rights);
             resroles.add(resrole);
         }
         HashMap res=new HashMap();

@@ -13,6 +13,6 @@ public interface TaskMapper {
     int addTask(Task task);
     List<Task> queryTaskListByClassId(int classid,int taskid);
     int updateTask(Task task);
-    int deleteTask(int taskid);
+    int deleteTask(int classid,int taskid);
     List<Task> queryminetask(int id);
 }

@@ -9,6 +9,7 @@ import com.sx.daoyun.pojo.User;
 import com.sx.daoyun.pojo.UserCourse;
 import com.sx.daoyun.tool.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -247,6 +248,32 @@ public class ClassController {
         Tool result = new Tool<>();
         courseMapper.endCourse(classID);
         result.setMessage("结束班课成功");
+        result.setFlag("true");
+        result.setCode(2000);
+        return  result;
+    }
+
+    @PostMapping("class/{id}")
+    public Tool erweima(@PathVariable("id") int id,
+                        @RequestBody Map<String,Object> code){
+        Tool result = new Tool<>();
+        Course course=courseMapper.queryCourseById(id);
+        String erweima=(String) code.get("qrcodeSrc");
+        course.setClassPic(erweima);
+        courseMapper.updateCourse(course);
+        result.setFlag("true");
+        result.setCode(2000);
+        return  result;
+    }
+
+    @GetMapping("class/classPic/{id}")
+    public Tool erweima(@PathVariable("id") int id){
+        Tool result = new Tool<>();
+        Course course=courseMapper.queryCourseById(id);
+        String scr=course.getClassPic();
+        HashMap map=new HashMap();
+        map.put("qrcodeSrc",scr);
+        result.setData(map);
         result.setFlag("true");
         result.setCode(2000);
         return  result;

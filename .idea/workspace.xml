@@ -5,33 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="258c8e09-bd9a-41a9-b128-fe3f7960f514" name="Default Changelist" comment="userlist">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sx/daoyun/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8aec2d2-1ea7-4651-a5ed-3cc458072ff1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8aec2d2-1ea7-4651-a5ed-3cc458072ff1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/DaoyunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/DaoyunApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ClassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/DictionaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/CourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/RoleMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignHistoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignHistoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignRecordMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/TaskMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/TaskMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/Transition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/CourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignHistoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignHistoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignRecordMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/TaskMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/TaskMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/Transition.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/Transition.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sx/daoyun/DaoyunApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sx/daoyun/DaoyunApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sx/daoyun/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sx/daoyun/controller/UserController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,7 +37,7 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/daoyun$DaoyunApplication.ic" NAME="DaoyunApplication Coverage Results" MODIFIED="1587224708076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/daoyun$DaoyunApplication.ic" NAME="DaoyunApplication Coverage Results" MODIFIED="1590906277853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -79,52 +71,18 @@
         <item name="ali" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="jerry: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="coursemember: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ali" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="jerry: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="usercourse: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="course: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MemberController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#memberList#0;class#MemberController#0" />
-                <element signature="method#deletemember#0;class#MemberController#0" />
-                <element signature="method#qiaodao#0;class#MemberController#0" />
-                <element signature="method#getQianDaoCode#0;class#MemberController#0" />
-                <element signature="method#qiaodaoHistory#0;class#MemberController#0" />
-                <element signature="method#memberDetail#0;class#MemberController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/UserCourseTrue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+            <state relative-caret-position="649">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#searchUser#0;class#MyController#0" />
@@ -136,44 +94,57 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MemberController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="205" column="79" selection-start-line="205" selection-start-column="70" selection-end-line="205" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#userAddCourse#0;class#MemberController#0" />
+                <element signature="method#memberList#0;class#MemberController#0" />
+                <element signature="method#deletemember#0;class#MemberController#0" />
+                <element signature="method#qiaodao#0;class#MemberController#0" />
+                <element signature="method#getQianDaoCode#0;class#MemberController#0" />
+                <element signature="method#memberDetail#0;class#MemberController#0" />
+                <element signature="method#memberList#1;class#MemberController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/signinrecord">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseTrueMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/signinhistory">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseMapper.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignHistoryMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+            <state relative-caret-position="414">
+              <caret line="23" column="63" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseTrueMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignHistoryMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="234">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -202,10 +173,18 @@
       <find>login/pwd</find>
       <find>rows</find>
       <find>userRoles</find>
-      <find>user/list/search</find>
       <find>begin</find>
       <find>UserCourse</find>
       <find>class/create/list</find>
+      <find>默认为当前时间</find>
+      <find>user/list/search</find>
+      <find>querybystudentid</find>
+      <find>querylistbybid</find>
+      <find>sdf</find>
+      <find>Calendar</find>
+      <find>.e</find>
+      <find>getQianDaoRecord</find>
+      <find>getQianDaoCode</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,22 +196,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ResourceMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/MenuMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Menu.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MenuMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserRoleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/RoleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/CourseMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/CourseMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/userCourseTrue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/userCourseTrueMapper.java" />
@@ -240,10 +206,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/userCourseTrue.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/UserCourseTrue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignHistoryMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignHistoryMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/TaskMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/TaskMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/Dic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/DicDatail.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Dic.java" />
@@ -262,12 +224,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/Transition.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/Transition.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MyController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ClassController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseTrueMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseTrueMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/TaskMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/TaskController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/TaskMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/RoleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Para.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/ParaMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ParaMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ParaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ClassController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignRecordMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignHistoryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignHistoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignHistory.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MemberController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseTrueMapper.xml" />
       </list>
     </option>
   </component>
@@ -294,10 +273,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
+    <option name="width" value="1940" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -308,8 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -428,6 +405,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,7 +417,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590132662930" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592041124288" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -447,12 +426,12 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Program Files\daoyun\src\main\resources\static\page" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Program Files\daoyun\src\main\resources\templates" />
       <recent name="E:\Program Files\daoyun\src\main\resources\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Program Files\daoyun\src\main\resources\static\page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -544,7 +523,11 @@
       <workItem from="1590040738760" duration="791000" />
       <workItem from="1590044365905" duration="2573000" />
       <workItem from="1590047533178" duration="5560000" />
-      <workItem from="1590126564114" duration="6020000" />
+      <workItem from="1590126564114" duration="10114000" />
+      <workItem from="1590646411992" duration="13218000" />
+      <workItem from="1590902302742" duration="14256000" />
+      <workItem from="1591427188597" duration="7905000" />
+      <workItem from="1592030060138" duration="11090000" />
     </task>
     <task id="LOCAL-00001" summary="userlist">
       <created>1585129056251</created>
@@ -644,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589246507845</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="userlist">
+      <created>1590132793045</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1590132793045</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -659,7 +649,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216807000" />
+    <option name="totallyTimeSpent" value="267370000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -671,8 +661,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="0" width="1552" height="830" extended-state="0" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
@@ -680,7 +669,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Web" order="5" sideWeight="0.5042194" side_tool="true" weight="0.24932976" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4957806" visible="true" weight="0.23123324" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4957806" visible="true" weight="0.25167337" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.3286119" />
@@ -690,20 +679,20 @@
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.35835695" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.39943343" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.18194842" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.28611898" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3286119" />
       <window_info anchor="bottom" id="Problems" order="14" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.3286119" />
       <window_info anchor="bottom" id="TODO" order="16" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="17" weight="0.3286119" />
-      <window_info anchor="right" id="Maven" order="0" weight="0.21447721" />
+      <window_info anchor="right" id="Maven" order="0" weight="0.17135207" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.28686327" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15997322" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
@@ -762,270 +751,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/TaskMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/CourseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignHistoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/MenuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/MenuMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="9" lean-forward="true" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/DicDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-            <element signature="e#1324#1325#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1481#1482#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-            <element signature="e#1630#1631#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Dic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/dictionary">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/datadetails">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/DicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/DictionaryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="177" column="51" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#searchDicList#0;class#DictionaryController#0" />
-            <element signature="method#searchDicDetailList#0;class#DictionaryController#0" />
-            <element signature="method#addDic#0;class#DictionaryController#0" />
-            <element signature="method#addDicDetail#0;class#DictionaryController#0" />
-            <element signature="method#getdicdetailone#0;class#DictionaryController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/DicDetailMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/DicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/DicDatailMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/DaoyunApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/Filter/exampleApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/Filter/CrosFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/TaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2448">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/token">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/TokenMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/role">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1033,36 +758,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#verifyPassword#0;class#LoginController#0" />
-            <element signature="method#updatePassword#0;class#LoginController#0" />
-          </folding>
+    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/resource">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Role.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="54">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/RoleMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/MenuMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="144">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="217" column="55" selection-start-line="217" selection-start-column="55" selection-end-line="217" selection-end-column="55" />
+        <state relative-caret-position="452">
+          <caret line="259" column="62" selection-start-line="259" selection-start-column="62" selection-end-line="259" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#showlist#0;class#UserController#0" />
@@ -1074,69 +794,282 @@
             <element signature="method#searchUser#0;class#UserController#0" />
             <element signature="method#resetPassword#0;class#UserController#0" />
             <element signature="method#test#0;class#UserController#0" />
-            <marker date="1589275615185" expanded="true" signature="4532:5700" ph="..." />
-            <marker date="1589275615185" expanded="true" signature="4534:5700" ph="..." />
-            <marker date="1589275615185" expanded="true" signature="6035:6909" ph="..." />
+            <marker date="1590654796288" expanded="true" signature="4605:5773" ph="..." />
+            <marker date="1590654796288" expanded="true" signature="4607:5773" ph="..." />
+            <marker date="1590654796288" expanded="true" signature="6108:6982" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/RoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="83" column="18" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/Transition.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/ParaMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="22" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/userrole">
+    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/para">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/Transition.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/page/my.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="-54" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/DictionaryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#searchDicList#0;class#DictionaryController#0" />
+            <element signature="method#searchDicDetailList#0;class#DictionaryController#0" />
+            <element signature="method#addDic#0;class#DictionaryController#0" />
+            <element signature="method#addDicDetail#0;class#DictionaryController#0" />
+            <element signature="method#getdicdetailone#0;class#DictionaryController#0" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#verifyPassword#0;class#LoginController#0" />
+            <element signature="method#updatePassword#0;class#LoginController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="85" column="95" selection-start-line="85" selection-start-column="95" selection-end-line="85" selection-end-column="95" />
+          <folding>
+            <element signature="method#queryRoleList#0;class#RoleController#0" />
+            <element signature="method#queryRoleById#0;class#RoleController#0" />
+            <element signature="method#addRole#0;class#RoleController#0" />
+            <element signature="method#DeleteRole#0;class#RoleController#0" />
+            <element signature="method#updateRole#0;class#RoleController#0" />
+            <element signature="method#searchrolebypo#0;class#RoleController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="method#addMenu#0;class#MenuController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Para.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ResourceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="method#addResource#0;class#ResourceController#0" />
+            <element signature="method#getResource#0;class#ResourceController#0" />
+            <element signature="method#getResource1#0;class#ResourceController#0" />
+            <element signature="method#deleteResource#0;class#ResourceController#0" />
+            <element signature="method#myAddCourse#0;class#ResourceController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/CourseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/StudentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/CourseMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="396">
+          <caret line="31" column="72" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ClassController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/DicDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/DicMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="148" column="2" lean-forward="true" selection-start-line="148" selection-start-column="2" selection-end-line="148" selection-end-column="2" />
+        <state relative-caret-position="-21" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/MenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ParaMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ResourceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserRoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseTrueMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="80" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/Transition.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/TaskMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/TokenMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ConcurrentDateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ParaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#myAddCourse#0;class#ClassController#0" />
-            <element signature="method#myBulitCourse#0;class#ClassController#0" />
-            <element signature="method#searchClassList#0;class#ClassController#0" />
-            <element signature="method#addClass#0;class#ClassController#0" />
-            <element signature="method#deleteClass#0;class#ClassController#0" />
-            <element signature="method#updateClass#0;class#ClassController#0" />
-            <element signature="method#getClassById#0;class#ClassController#0" />
-            <element signature="method#endClass#0;class#ClassController#0" />
+            <element signature="method#addPara#0;class#ParaController#0" />
+            <element signature="method#updatePara#0;class#ParaController#0" />
+            <element signature="method#updatePara#1;class#ParaController#0" />
+            <element signature="method#getPara#0;class#ParaController#0" />
+            <element signature="method#getParaList#0;class#ParaController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/task">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/TaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+          <folding>
+            <element signature="method#addTask#0;class#TaskController#0" />
+            <element signature="method#queryTaskList#0;class#TaskController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1148,40 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/UserCourseTrueMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/coursemember">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1189,40 +1088,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/usercourse">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MemberController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/ClassController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="181">
+          <caret line="257" column="61" selection-start-line="257" selection-start-column="61" selection-end-line="257" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#memberList#0;class#MemberController#0" />
-            <element signature="method#deletemember#0;class#MemberController#0" />
-            <element signature="method#qiaodao#0;class#MemberController#0" />
-            <element signature="method#getQianDaoCode#0;class#MemberController#0" />
-            <element signature="method#qiaodaoHistory#0;class#MemberController#0" />
-            <element signature="method#memberDetail#0;class#MemberController#0" />
+            <element signature="method#myAddCourse#0;class#ClassController#0" />
+            <element signature="method#myBulitCourse#0;class#ClassController#0" />
+            <element signature="method#searchClassList#0;class#ClassController#0" />
+            <element signature="method#addClass#0;class#ClassController#0" />
+            <element signature="method#deleteClass#0;class#ClassController#0" />
+            <element signature="method#updateClass#0;class#ClassController#0" />
+            <element signature="method#getClassById#0;class#ClassController#0" />
+            <element signature="method#erweima#0;class#ClassController#0" />
+            <element signature="method#erweima#1;class#ClassController#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/UserCourseTrue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignRecordMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="253">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignRecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/mapper/SignHistoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/pojo/SignHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/SignHistoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="63" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+        <state relative-caret-position="649">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#searchUser#0;class#MyController#0" />
@@ -1233,10 +1166,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserCourseTrueMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sx/daoyun/controller/MemberController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <state relative-caret-position="293">
+          <caret line="205" column="79" selection-start-line="205" selection-start-column="70" selection-end-line="205" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#userAddCourse#0;class#MemberController#0" />
+            <element signature="method#memberList#0;class#MemberController#0" />
+            <element signature="method#deletemember#0;class#MemberController#0" />
+            <element signature="method#qiaodao#0;class#MemberController#0" />
+            <element signature="method#getQianDaoCode#0;class#MemberController#0" />
+            <element signature="method#memberDetail#0;class#MemberController#0" />
+            <element signature="method#memberList#1;class#MemberController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/signinrecord">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8aec2d2-1ea7-4651-a5ed-3cc458072ff1/schema/jerry/table/signinhistory">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

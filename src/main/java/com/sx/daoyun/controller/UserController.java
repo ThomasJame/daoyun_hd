@@ -78,7 +78,9 @@ public class UserController {
         result.setMessage("用户管理列表查询成功");
         result.setFlag("true");
         result.setCode(2000);
+        System.out.println("00001");
         List<User> userList = userMapper.searmap(username,nickname,rolename);
+        System.out.println("0000");
         int count=userList.size();
         List<User> usersList2=new ArrayList<>();
         if (end>=count-1){
@@ -257,11 +259,14 @@ public class UserController {
     @GetMapping("test")
     public Tool test(@RequestBody Map<String,Object> userMap) {
         Tool result = new Tool<>();
-        String username=(String) userMap.get("username");
-        String nickname=(String) userMap.get("nickname");
-        String rolename=(String) userMap.get("rolename");
-       List<User> userList=userMapper.searmap(username,nickname,rolename);
-       result.setData(userList);
+       Role role=roleMapper.queryRoleById(20);
+      result.setData(role.getUpdater());
+      ArrayList rights = new ArrayList();
+        for (char c: role.getUpdater().toCharArray()) {
+            if (c!='['&&c!=']'&&c!=','&&c!=' ')
+            rights.add(c-'0');
+        }
+        result.setData(rights);
         return result;
     }
 }

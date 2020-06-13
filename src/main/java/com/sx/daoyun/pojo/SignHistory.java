@@ -1,7 +1,13 @@
 package com.sx.daoyun.pojo;
 
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.Date;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SignHistory {
     private int ClassID;
     private int MemberID;
@@ -11,6 +17,24 @@ public class SignHistory {
     private Date CreateDate;
     private String Modifyby;
     private Date ModifyDate;
+    private String Longitude;
+    private String Latitude;
+
+    public String getLongitude() {
+        return Longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        Longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return Latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        Latitude = latitude;
+    }
 
     public int getClassID() {
         return ClassID;

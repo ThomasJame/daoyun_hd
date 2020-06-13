@@ -1,7 +1,13 @@
 package com.sx.daoyun.pojo;
 
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.Date;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SignRecord {
     private int QianDaoID;
     private int ClassID;
@@ -14,6 +20,24 @@ public class SignRecord {
     private Date CreateDate;
     private String Modifyby;
     private Date ModifyDate;
+    private String Latitude;
+    private String Longitude;
+
+    public String getLatitude() {
+        return Latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        Latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return Longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        Longitude = longitude;
+    }
 
     public int getQianDaoID() {
         return QianDaoID;

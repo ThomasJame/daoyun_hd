@@ -79,21 +79,21 @@ public class MyController {
                              @RequestBody Map<String,Object> myinfos) {
         Tool result = new Tool<>();
         Map<String,Object> myinfo=(Map<String,Object>)myinfos.get("myInfo");
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat();
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
         result.setMessage("myinfo页面点击保存更新页面");
         User user= userMapper.queryUserById(userId);
         user.setUserName((String) myinfo.get("username"));
         user.setNickName((String)myinfo.get("nickName"));
         user.setMobile((String)myinfo.get("mobile"));
         try {
-            user.setBirthday((Date) myinfo.get("birthday"));
+            user.setBirthday(simpleDateFormat.parse((String)myinfo.get("birthday")));
         }catch (Exception e){
             result.setMessage("生日格式错误");
         }
         user.setSex((String)myinfo.get("sex"));
         user.setSchool((String)myinfo.get("school"));
         user.setDepartment((String)myinfo.get("department"));
-        user.setNumber(Integer.parseInt((String) myinfo.get("number")));
+        user.setNumber((int)myinfo.get("number"));
         String rolename=(String)myinfo.get("userRole");
         Role role=roleMapper.queryRoleidByname(rolename);
         int id=role.getId();

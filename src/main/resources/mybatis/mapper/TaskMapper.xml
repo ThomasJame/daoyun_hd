@@ -24,13 +24,11 @@
         )
     </insert>
     <update id="updateTask" parameterType="Task">
-        update task set TaskTitle=#{TaskTitle},TaskPicture=#{TaskPicture},TaskExp=#{TaskExp}
-        ,Date=#{Date},ParticipateNum=#{ParticipateNum},Content=#{Content},Information=#{Information},
-      Modifyby=#{Modifyby},ModifyDate=#{ModifyDate}
-        where TaskID=#{TaskID}
+        update task set TaskTitle=#{TaskTitle},TaskExp=#{TaskExp},Content=#{Content}
+        where TaskID=#{TaskID} and ClassID=#{ClassID}
     </update>
     <delete id="deleteTask" parameterType="int">
-        delete from task where TaskID=#{0}
+        delete from task where ClassID=#{classid} and TaskID=#{taskid}
     </delete>
 
 </mapper>
